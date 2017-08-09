@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; PyCryptodome 3.4.6 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="PyCryptodome 3.4.6 documentation" href="../index.html"/>
+        <link rel="next" title="API documentation" href="api.html"/>
+        <link rel="prev" title="Features" href="features.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://pycryptodome.readthedocs.io/en/latest/src/installation.html" />
+
+<link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="text/javascript" src="../_static/readthedocs-data.js"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = 'src/installation' 		
+READTHEDOCS_DATA['source_suffix'] = '.rst'
+</script>
+
+<script type="text/javascript" src="../_static/readthedocs-dynamic-include.js"></script>
+
+<!-- end RTD <extrahead> --></head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PyCryptodome
+          
+
+          
+          </a>
+
+          
+            
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">PyCryptodome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linux-ubuntu">Linux Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linux-fedora">Linux Fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-pre-compiled">Windows (pre-compiled)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-from-sources-python-2-x-python-3-2">Windows (from sources, Python 2.x, Python &lt;=3.2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-from-sources-python-3-3-and-3-4">Windows (from sources, Python 3.3 and 3.4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-from-sources-python-3-5-and-newer">Windows (from sources, Python 3.5 and newer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pgp-verification">PGP verification</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute_support.html">Contribute and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future.html">Future plans</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCryptodome</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/Legrandin/pycryptodome/blob/master/Doc/src/installation.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>The installation procedure depends on the package you want the library in.
+PyCryptodome can be used as:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first"><strong>a drop-in replacement for the old PyCrypto library</strong>.
+You install it with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pycryptodome</span>
+</pre></div>
+</div>
+<p>In this case, all modules are installed under the <code class="docutils literal"><span class="pre">Crypto</span></code> package.
+You can test everything is right with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">Crypto</span><span class="o">.</span><span class="n">SelfTest</span>
+</pre></div>
+</div>
+<p>One must avoid having both PyCrypto and PyCryptodome installed
+at the same time, as they will interfere with each other.</p>
+<p>This option is therefore recommended only when you are sure that
+the whole application is deployed in a <code class="docutils literal"><span class="pre">virtualenv</span></code>.</p>
+</li>
+<li><p class="first"><strong>a library independent of the old PyCrypto</strong>.
+You install it with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pycryptodomex</span>
+</pre></div>
+</div>
+<p>You can test everything is right with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">Cryptodome</span><span class="o">.</span><span class="n">SelfTest</span>
+</pre></div>
+</div>
+<p>In this case, all modules are installed under the <code class="docutils literal"><span class="pre">Cryptodome</span></code> package.
+PyCrypto and PyCryptodome can coexist.</p>
+</li>
+</ol>
+</div></blockquote>
+<p>The procedures below go a bit more in detail, by explaining
+how to setup the environment for compiling the C extensions
+for each OS, and how to install the GMP library.</p>
+<p>All instructions to follow install PyCryptodome as the <code class="docutils literal"><span class="pre">Cryptodome</span></code> package
+(option #2). Change <code class="docutils literal"><span class="pre">pycryptodomex</span></code> to <code class="docutils literal"><span class="pre">pycryptodome</span></code> if you prefer
+option #1 (<code class="docutils literal"><span class="pre">Crypto</span></code> package).</p>
+<div class="section" id="linux-ubuntu">
+<h2>Linux Ubuntu<a class="headerlink" href="#linux-ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>For Python 2.x:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-get install build-essential libgmp3-dev python-dev
+$ pip install pycryptodomex
+$ python -m Cryptodome.SelfTest
+</pre></div>
+</div>
+<p>For Python 3.x:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-get install build-essential libgmp3-dev python3-dev
+$ pip install pycryptodomex
+$ python3 -m Cryptodome.SelfTest
+</pre></div>
+</div>
+<p>For PyPy:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt-get install build-essential libgmp3-dev pypy-dev
+$ pip install pycryptodomex
+$ pypy -m Cryptodome.SelfTest
+</pre></div>
+</div>
+</div>
+<div class="section" id="linux-fedora">
+<h2>Linux Fedora<a class="headerlink" href="#linux-fedora" title="Permalink to this headline">¶</a></h2>
+<p>For Python 2.x:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo yum install gcc gmp python-devel
+$ pip install pycryptodomex
+$ python -m Cryptodome.SelfTest
+</pre></div>
+</div>
+<p>For Python 3.x:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo yum install gcc gmp python3-devel
+$ pip install pycryptodomex
+$ python3 -m Cryptodome.SelfTest
+</pre></div>
+</div>
+<p>For PyPy:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo yum install gcc gmp pypy-devel
+$ pip install pycryptodomex
+$ pypy -m Cryptodome.SelfTest
+</pre></div>
+</div>
+</div>
+<div class="section" id="windows-pre-compiled">
+<h2>Windows (pre-compiled)<a class="headerlink" href="#windows-pre-compiled" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Install PyCryptodome as a <a class="reference external" href="http://pythonwheels.com/">wheel</a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pycryptodomex</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">To make sure everything works fine, run the test suite:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">Cryptodome</span><span class="o">.</span><span class="n">SelfTest</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="windows-from-sources-python-2-x-python-3-2">
+<h2>Windows (from sources, Python 2.x, Python &lt;=3.2)<a class="headerlink" href="#windows-from-sources-python-2-x-python-3-2" title="Permalink to this headline">¶</a></h2>
+<p>Windows does not come with a C compiler like most Unix systems.
+The simplest way to compile the <em>Pycryptodome</em> extensions from
+source code is to install the minimum set of Visual Studio
+components freely made available by Microsoft.</p>
+<ol class="arabic">
+<li><p class="first">Run Python from the command line and note down its version
+and whether it is a 32 bit or a 64 bit application.</p>
+<p>For instance, if you see:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">2</span><span class="o">+</span> <span class="o">...</span> <span class="p">[</span><span class="n">MSC</span> <span class="n">v</span><span class="o">.</span><span class="mi">1500</span> <span class="mi">32</span> <span class="n">bit</span> <span class="p">(</span><span class="n">Intel</span><span class="p">)]</span> <span class="n">on</span> <span class="n">win32</span>
+</pre></div>
+</div>
+<p>you clearly have Python 2.7 and it is a 32 bit application.</p>
+</li>
+<li><p class="first"><strong>[Only once]</strong> In order to speed up asymmetric key algorithms like RSA,
+it is recommended to install the <a class="reference external" href="http://mpir.org">MPIR</a> library (a fork of the popular
+<a class="reference external" href="http://gmplib.org">GMP</a> library, more suitable for the Windows environment).
+For convenience, I made available pre-compiled <em>mpir.dll</em> files to match
+the various types of Python one may have:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Python 2.x, 3.1, 3.2 (VS2008 runtime)<ul>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2008_32/mpir.dll">32 bits</a></li>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2008_64/mpir.dll">64 bits</a></li>
+</ul>
+</li>
+<li>Python 3.3 and 3.4 (VS2010 runtime)<ul>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2010_32/mpir.dll">32 bits</a></li>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2010_64/mpir.dll">64 bits</a></li>
+</ul>
+</li>
+<li>Python 3.5 (VS2015 runtime)<ul>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2015_32/mpir.dll">32 bits</a></li>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2015_64/mpir.dll">64 bits</a></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<p>Download the correct <em>mpir.dll</em> and drop it into the Python interpreter
+directory (for instance <code class="docutils literal"><span class="pre">C:\Python34</span></code>). <em>Pycryptodome</em> will
+automatically make use of it.</p>
+</li>
+<li><p class="first"><strong>[Only once]</strong> Install <a class="reference external" href="http://www.slysoft.com/it/virtual-clonedrive.html">Virtual Clone Drive</a>.</p>
+</li>
+<li><p class="first"><strong>[Only once]</strong> Download the ISO image of the <a href="#id12"><span class="problematic" id="id13">`MS SDK for Windows 7 and . NET Framework 3.5 SP1`_</span></a>.
+It contains the Visual C++ 2008 compiler.</p>
+<p>There are three ISO images available: you will need <code class="docutils literal"><span class="pre">GRMSDK_EN_DVD.iso</span></code> if your
+Windows OS is 32 bits or <code class="docutils literal"><span class="pre">GRMSDKX_EN_DVD.iso</span></code> if 64 bits.</p>
+<p>Mount the ISO with <em>Virtual Clone Drive</em> and install the C/C++ compilers and the
+redistributable only.</p>
+</li>
+<li><p class="first">If your Python is a 64 bit application, open a command prompt and perform the following steps:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">cd</span> <span class="s2">&quot;C:\Program Files\Microsoft SDKs\Windows</span><span class="se">\v</span><span class="s2">7.0&quot;</span>
+<span class="o">&gt;</span> <span class="n">cmd</span> <span class="o">/</span><span class="n">V</span><span class="p">:</span><span class="n">ON</span> <span class="o">/</span><span class="n">K</span> <span class="n">Bin</span>\<span class="n">SetEnv</span><span class="o">.</span><span class="n">Cmd</span> <span class="o">/</span><span class="n">x64</span> <span class="o">/</span><span class="n">release</span>
+<span class="o">&gt;</span> <span class="nb">set</span> <span class="n">DISTUTILS_USE_SDK</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal"><span class="pre">/x64</span></code> with <code class="docutils literal"><span class="pre">/x86</span></code> if your Python is a 32 bit application.</p>
+</li>
+<li><p class="first">Compile and install PyCryptodome:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pycryptodomex</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">use</span><span class="o">-</span><span class="n">wheel</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">To make sure everything work fine, run the test suite:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">Cryptodome</span><span class="o">.</span><span class="n">SelfTest</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="windows-from-sources-python-3-3-and-3-4">
+<h2>Windows (from sources, Python 3.3 and 3.4)<a class="headerlink" href="#windows-from-sources-python-3-3-and-3-4" title="Permalink to this headline">¶</a></h2>
+<p>Windows does not come with a C compiler like most Unix systems.
+The simplest way to compile the <em>Pycryptodome</em> extensions from
+source code is to install the minimum set of Visual Studio
+components freely made available by Microsoft.</p>
+<ol class="arabic">
+<li><p class="first">Run Python from the command line and note down its version
+and whether it is a 32 bit or a 64 bit application.</p>
+<p>For instance, if you see:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">2</span><span class="o">+</span> <span class="o">...</span> <span class="p">[</span><span class="n">MSC</span> <span class="n">v</span><span class="o">.</span><span class="mi">1500</span> <span class="mi">32</span> <span class="n">bit</span> <span class="p">(</span><span class="n">Intel</span><span class="p">)]</span> <span class="n">on</span> <span class="n">win32</span>
+</pre></div>
+</div>
+<p>you clearly have Python 2.7 and it is a 32 bit application.</p>
+</li>
+<li><p class="first"><strong>[Only once]</strong> In order to speed up asymmetric key algorithms like RSA,
+it is recommended to install the <a class="reference external" href="http://mpir.org">MPIR</a> library (a fork of the popular
+<a class="reference external" href="http://gmplib.org">GMP</a> library, more suitable for the Windows environment).
+For convenience, I made available pre-compiled <em>mpir.dll</em> files to match
+the various types of Python one may have:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Python 2.x, 3.1, 3.2 (VS2008 runtime)<ul>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2008_32/mpir.dll">32 bits</a></li>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2008_64/mpir.dll">64 bits</a></li>
+</ul>
+</li>
+<li>Python 3.3 and 3.4 (VS2010 runtime)<ul>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2010_32/mpir.dll">32 bits</a></li>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2010_64/mpir.dll">64 bits</a></li>
+</ul>
+</li>
+<li>Python 3.5 (VS2015 runtime)<ul>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2015_32/mpir.dll">32 bits</a></li>
+<li><a class="reference external" href="https://github.com/Legrandin/mpir-windows-builds/blob/master/mpir-2.6.0_VS2015_64/mpir.dll">64 bits</a></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<p>Download the correct <em>mpir.dll</em> and drop it into the Python interpreter
+directory (for instance <code class="docutils literal"><span class="pre">C:\Python34</span></code>). <em>Pycryptodome</em> will
+automatically make use of it.</p>
+</li>
+<li><p class="first"><strong>[Only once]</strong> Install <a class="reference external" href="http://www.slysoft.com/it/virtual-clonedrive.html">Virtual Clone Drive</a>.</p>
+</li>
+<li><p class="first"><strong>[Only once]</strong> Download the ISO image of the <a href="#id14"><span class="problematic" id="id15">`MS SDK for Windows 7 and . NET Framework 4`_</span></a>.
+It contains the Visual C++ 2010 compiler.</p>
+<p>There are three ISO images available: you will need <code class="docutils literal"><span class="pre">GRMSDK_EN_DVD.iso</span></code> if your
+Windows OS is 32 bits or <code class="docutils literal"><span class="pre">GRMSDKX_EN_DVD.iso</span></code> if 64 bits.</p>
+<p>Mount the ISO with <em>Virtual Clone Drive</em> and install the C/C++ compilers and the
+redistributable only.</p>
+</li>
+<li><p class="first">If your Python is a 64 bit application, open a command prompt and perform the following steps:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">cd</span> <span class="s2">&quot;C:\Program Files\Microsoft SDKs\Windows</span><span class="se">\v</span><span class="s2">7.1&quot;</span>
+<span class="o">&gt;</span> <span class="n">cmd</span> <span class="o">/</span><span class="n">V</span><span class="p">:</span><span class="n">ON</span> <span class="o">/</span><span class="n">K</span> <span class="n">Bin</span>\<span class="n">SetEnv</span><span class="o">.</span><span class="n">Cmd</span> <span class="o">/</span><span class="n">x64</span> <span class="o">/</span><span class="n">release</span>
+<span class="o">&gt;</span> <span class="nb">set</span> <span class="n">DISTUTILS_USE_SDK</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal"><span class="pre">/x64</span></code> with <code class="docutils literal"><span class="pre">/x86</span></code> if your Python is a 32 bit application.</p>
+</li>
+<li><p class="first">Compile and install PyCryptodome:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pycryptodomex</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">use</span><span class="o">-</span><span class="n">wheel</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">To make sure everything work fine, run the test suite:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">Cryptodome</span><span class="o">.</span><span class="n">SelfTest</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="windows-from-sources-python-3-5-and-newer">
+<h2>Windows (from sources, Python 3.5 and newer)<a class="headerlink" href="#windows-from-sources-python-3-5-and-newer" title="Permalink to this headline">¶</a></h2>
+<p>Windows does not come with a C compiler like most Unix systems.
+The simplest way to compile the <em>Pycryptodome</em> extensions from
+source code is to install the minimum set of Visual Studio
+components freely made available by Microsoft.</p>
+<ol class="arabic">
+<li><p class="first"><strong>[Once only]</strong> Download <a class="reference external" href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx">MS Visual Studio 2015</a> (Community Edition) and install the C/C++
+compilers and the redistributable only.</p>
+</li>
+<li><p class="first">Perform all steps from the section <em>Windows (pre-compiled)</em> but add the <code class="docutils literal"><span class="pre">--no-use-wheel</span></code>
+parameter when calling <code class="docutils literal"><span class="pre">pip</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pycryptodomex</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">use</span><span class="o">-</span><span class="n">wheel</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="pgp-verification">
+<h2>PGP verification<a class="headerlink" href="#pgp-verification" title="Permalink to this headline">¶</a></h2>
+<p>All source packages and wheels on PyPI are cryptographically signed.
+They can be verified with the following PGP key:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-----</span><span class="n">BEGIN</span> <span class="n">PGP</span> <span class="n">PUBLIC</span> <span class="n">KEY</span> <span class="n">BLOCK</span><span class="o">-----</span>
+
+<span class="n">mQINBFTXjPgBEADc3j7vnma9MXRshBPPXXenVpthQD6lrF</span><span class="o">/</span><span class="mi">3</span><span class="n">XaBT2RptSf</span><span class="o">/</span><span class="n">viOD</span><span class="o">+</span>
+<span class="n">tz85du5XVp</span><span class="o">+</span><span class="n">r0SYYGeMNJCQ9NsztxblN</span><span class="o">/</span><span class="n">lnKgkfWRmSrB</span><span class="o">+</span><span class="n">V6QGS</span><span class="o">+</span><span class="n">e3bR5d9OIxzN</span>
+<span class="mi">7</span><span class="n">haPxBnyRj</span><span class="o">//</span><span class="n">hCT</span><span class="o">/</span><span class="n">kKis6fa7N9wtwKBBjbaSX</span><span class="o">+</span><span class="mi">9</span><span class="n">vpt7Rrt203sKfcChA4iR3EG89</span>
+<span class="n">TNQoc</span><span class="o">/</span><span class="n">kGGmwk</span><span class="o">/</span><span class="n">gyjfU38726v0NOhMKJp2154iQQVZ76hTDk6GkOYHTcPxdkAj4jS</span>
+<span class="n">Dd74M9sOtoOlyDLHOLcWNnlWGgZjtz0z0qSyFXRSuOfggTxrepWQgKWXXzgVB4Jo</span>
+<span class="mi">0</span><span class="n">bhmXPAV8vkX5BoG6zGkYb47NGGvknax6jCvFYTCp1sOmVtf5UTVKPplFm077tQg</span>
+<span class="mi">0</span><span class="n">KZNAvEQrdWRIiQ1cCGCoF2Alex3VmVdefHOhNmyY7xAlzpP0c8z1DsgZgMnytNn</span>
+<span class="n">GPusWeqQVijRxenl</span><span class="o">+</span><span class="n">lyhbkb9ZLDq7mOkCRXSze9J2</span><span class="o">+</span><span class="mi">5</span><span class="n">aLTJbJu3</span><span class="o">+</span><span class="n">Wx6BEyNIHP</span><span class="o">/</span><span class="n">f</span>
+<span class="n">K3E77nXvC0oKaYTbTwEQSBAggAXP</span><span class="o">+</span><span class="mi">7</span><span class="n">oQaA0ea2SLO176xJdNfC5lkQEtMMSZI4gN</span>
+<span class="n">iSqjUxXW2N5qEHHex1atmTtk4W9tQEw030a0UCxzDJMhD0aWFKq7wOxoCQ1q821R</span>
+<span class="n">vxBH4cfGWdL</span><span class="o">/</span><span class="mi">1</span><span class="n">FUcuCMSUlc6fhTM9pvMXgjdEXcoiLSTdaHuVLuqmF</span><span class="o">/</span><span class="n">E0wARAQAB</span>
+<span class="n">tB9MZWdyYW5kaW4gPGhlbGRlcmlqc0BnbWFpbC5jb20</span><span class="o">+</span><span class="n">iQI4BBMBAgAiBQJU14z4</span>
+<span class="n">AhsDBgsJCAcDAgYVCAIJCgsEFgIDAQIeAQIXgAAKCRDabO</span><span class="o">+</span><span class="n">N4RaZEn7IEACpApha</span>
+<span class="n">vRwPB</span><span class="o">+</span><span class="n">Dv87aEyVmjZ96Nb3mxHdeP2uSmUxAODzoB5oJJ1QL6HRxEVlU8idjdf73H</span>
+<span class="n">DX39ZC7izD</span><span class="o">+</span><span class="n">oYIve9sNwTbKqJCZaTxlTDdgSF1N57eJOlELAy</span><span class="o">+</span><span class="n">SqpHtaMJPk7SfJ</span>
+<span class="n">l</span><span class="o">/</span><span class="n">iYoUYxByPLZU1wDwZEDNzt9RCGy3bd</span><span class="o">/</span><span class="n">vF</span><span class="o">/</span><span class="n">AxWjdUJJPh3E4j5hswvIGSf8</span><span class="o">/</span><span class="n">Tp3</span>
+<span class="n">MDROU1BaNBOd0CLvBHok8</span><span class="o">/</span><span class="n">xavwO6Dk</span><span class="o">/</span><span class="n">fE4hJhd5uZcEPtd1GJcPq51z2yr7PGUcb</span>
+<span class="n">oERsKZyG8cgfd7j8qoTd6jMIW6fBVHdxiMxW6</span><span class="o">/</span><span class="n">Z45X</span><span class="o">/</span><span class="n">vVciQSzzEl</span><span class="o">/</span><span class="n">yjPUW42kyr</span>
+<span class="n">Ib6M16YmnDzp8bl4NNFvvR9uWvOdUkep2Bi8s8kBMJ7G9rHHJcdVy</span><span class="o">/</span><span class="n">tP1ECS9Bse</span>
+<span class="n">hN4v5oJJ4v5mM</span><span class="o">/</span><span class="n">MiWRGKykZULWklonpiq6CewYkmXQDMRnjGXhjCWrB6LuSIkIXd</span>
+<span class="n">gKvDNpJ8yEhAfmpvA4I3laMoof</span><span class="o">/</span><span class="n">tSZ7ZuyLSZGLKl6hoNIB13HCn4dnjNBeaXCWX</span>
+<span class="n">pThgeOWxV6u1fhz4CeC1Hc8WOYr8S7G8P10Ji6owOcj</span><span class="o">/</span><span class="n">a1QuCW8XDB2omCTXlhFj</span>
+<span class="n">zpC9dX8HgmUVnbPNiMjphihbKXoOcunRx4ZvqIa8mnTbI4tHtR0K0tI4MmbpcVOZ</span>
+<span class="mi">8</span><span class="n">IFJ0nZJXuZiL57ijLREisPYmHfBHAgmh1j</span><span class="o">/</span><span class="n">W7kCDQRU14z4ARAA3QATRgvOSYFh</span>
+<span class="n">nJOnIz6PO3G9kXWjJ8wvp3yE1</span><span class="o">/</span><span class="n">PwwTc3NbVUSNCW14xgM2Ryhn9NVh8iEGtPGmUP</span>
+<span class="mi">4</span><span class="n">vu7rvuLC2rBs1joBTyqf0mDghlZrb5ZjXv5LcG9SA6FdAXRU6T</span><span class="o">+</span><span class="n">b1G2ychKkhEh</span>
+<span class="n">d</span><span class="o">/</span><span class="n">ulLw</span><span class="o">/</span><span class="n">TKLds9zHhE</span><span class="o">+</span><span class="n">hkAagLQ5jqjcQN0iX5EYaOukiPUGmnd9fOEGi9YMYtRdrH</span>
+<span class="o">+</span><span class="mi">3</span><span class="n">bZxUpsRStLBWJ6auY7Bla8NJOhaWpr5p</span><span class="o">/</span><span class="n">ls</span><span class="o">+</span><span class="n">mnDWoqf</span><span class="o">+</span><span class="n">tXCCps1Da</span><span class="o">/</span><span class="n">pfHKYDFc</span>
+<span class="mi">2</span><span class="n">VVdyM</span><span class="o">/</span><span class="n">VfNny9eaczYpnj5hvIAACWChgGDBwxPh2DGdUfiQi</span><span class="o">/</span><span class="n">QqrK96</span><span class="o">+</span><span class="n">F7ulqz6V</span>
+<span class="mi">2</span><span class="n">exX4CL0cPv5fUpQqSU</span><span class="o">/</span><span class="mi">0</span><span class="n">R5WApM9bl2</span><span class="o">+</span><span class="n">wljFhoCXlydU9HNn</span><span class="o">+</span><span class="mi">0</span><span class="n">GatGzEoo3yrV</span><span class="o">/</span><span class="n">m</span>
+<span class="n">PXv7d6NdZxyOqgxu</span><span class="o">/</span><span class="n">ai</span><span class="o">/</span><span class="n">z</span><span class="o">++</span><span class="n">F2pWUXSBxZN3Gv28boFKQhmtthTcFudNUtQOchhn8</span>
+<span class="n">Pf</span><span class="o">/</span><span class="n">ipVISqrsZorTx9Qx4fPScEWjwbh84Uz20bx0sQs1oYcek2YG5RhEdzqJ6W78R</span>
+<span class="n">S</span><span class="o">/</span><span class="n">dbzlNYMXGdkxB6C63m8oiGvw0hdN</span><span class="o">/</span><span class="n">iGVqpNAoldFmjnFqSgKpyPwfLmmdstJ6f</span>
+<span class="n">xFZdGPnKexCpHbKr9fg50jZRenIGai79qPIiEtCZHIdpeemSrc7TKRPV3H2aMNfG</span>
+<span class="n">L5HTqcyaM2</span><span class="o">+</span><span class="n">QrMtHPMoOFzcjkigLimMAEQEAAYkCHwQYAQIACQUCVNeM</span><span class="o">+</span><span class="n">AIbDAAK</span>
+<span class="n">CRDabO</span><span class="o">+</span><span class="n">N4RaZEo7lD</span><span class="o">/</span><span class="mi">45</span><span class="n">J6z2wbL8aIudGEL0aY3hfmW3qrUyoHgaw35KsOY9vZwb</span>
+<span class="n">cZuJe0RlYptOreH</span><span class="o">/</span><span class="n">NrbR5SXODfhd2sxYyyvXBOuZh9i7OOBsrAd5UE01GCvToPwh</span>
+<span class="mi">7</span><span class="n">IpMV3GSSAB4P8XyJh20tZqiZOYKhmbf29gUDzqAI6GzUa0U8xidUKpW2zqYGZjp</span>
+<span class="n">wk3RI1fS7tyi</span><span class="o">/</span><span class="mi">0</span><span class="n">N8B9tIZF48kbvpFDAjF8w7NSCrgRquAL7zJZIG5o5zXJM</span><span class="o">/</span><span class="n">ffF3</span>
+<span class="mi">67</span><span class="n">Dnz278MbifdM</span><span class="o">/</span><span class="n">HJ</span><span class="o">+</span><span class="n">Tj0R0Uvvki9Z61nT653SoUgvILQyC72XI</span><span class="o">+</span><span class="n">x0</span><span class="o">+</span><span class="mi">3</span><span class="n">GQwsE38a</span>
+<span class="mi">5</span><span class="n">aJNZ1NBD3</span><span class="o">/</span><span class="n">v</span><span class="o">+</span><span class="n">gERQxRfhM5iLFLXK0Xe4K2XFM1g0yN4L4bQPbhSCq88g9Dhmygk</span>
+<span class="n">XPbBsrK0NKPVnyGyUXM0VpgRbot11hxx02jC3HxS1nlLF</span><span class="o">+</span><span class="n">oQdkKFzJAMOU7UbpX</span><span class="o">/</span>
+<span class="n">oO</span><span class="o">+</span><span class="mi">286</span><span class="n">J1FmpG</span><span class="o">+</span><span class="n">fihIbvp1Quq48immtnzTeLZbYCsG4mrM</span><span class="o">+</span><span class="n">ySYd0Er0G8TBdAOTiN</span>
+<span class="mi">3</span><span class="n">zMbGX0QOO2fOsJ1d980cVjHn5CbAo8C0A</span><span class="o">/</span><span class="mi">4</span><span class="o">/</span><span class="n">R2cXAfpacbvTiNq5BVk9NKa2dNb</span>
+<span class="n">kmnTStP2qILWmm5ASXlWhOjWNmptvsUcK</span><span class="o">+</span><span class="mi">8</span><span class="n">T</span><span class="o">+</span><span class="n">uQboLioEv19Ob4j5Irs</span><span class="o">/</span><span class="n">OpOuP0K</span>
+<span class="n">v4woCi9</span><span class="o">+</span><span class="mi">03</span><span class="n">HMS42qGSe</span><span class="o">/</span><span class="n">igClFO3</span><span class="o">+</span><span class="n">gUMZg9PJnTJhuaTbytXhUBgBRUPsS</span><span class="o">+</span><span class="n">lQAQ</span><span class="o">==</span>
+<span class="o">=</span><span class="n">DpoI</span>
+<span class="o">-----</span><span class="n">END</span> <span class="n">PGP</span> <span class="n">PUBLIC</span> <span class="n">KEY</span> <span class="n">BLOCK</span><span class="o">-----</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="features.html" class="btn btn-neutral" title="Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      
+        <span class="commit">
+          Revision <code>c6092aef</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+        
+          <dd><a href="/en/latest/">latest</a></dd>
+        
+          <dd><a href="/en/stable/">stable</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="//readthedocs.org/projects/pycryptodome/downloads/pdf/latest/">pdf</a></dd>
+        
+          <dd><a href="//readthedocs.org/projects/pycryptodome/downloads/htmlzip/latest/">htmlzip</a></dd>
+        
+          <dd><a href="//readthedocs.org/projects/pycryptodome/downloads/epub/latest/">epub</a></dd>
+        
+      </dl>
+      <dl>
+        <dt>On Read the Docs</dt>
+          <dd>
+            <a href="//readthedocs.org/projects/pycryptodome/?fromdocs=pycryptodome">Project Home</a>
+          </dd>
+          <dd>
+            <a href="//readthedocs.org/builds/pycryptodome/?fromdocs=pycryptodome">Builds</a>
+          </dd>
+      </dl>
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+
+    </div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.4.6',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/underscore.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/doctools.js"></script>
+      <script type="text/javascript" src="https://media.readthedocs.org/javascript/readthedocs-doc-embed.js"></script>
+
+  
+
+  
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
